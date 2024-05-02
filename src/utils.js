@@ -26,6 +26,15 @@ export const numberToCurrency = (amount, currencyCode) => {
       ? filters[min] >= value[min] && filters[min] <= value[max]
       : value[max] != null && filters[min] <= value[max];
   };
+  const compareRemote = (value, array) => {
+    if (array?.includes("remote") && !array.includes("in-office")) {
+      return value["location"] === "remote";
+    } else if (!array?.includes("remote") && array.includes("in-office")) {
+      return value["location"] !== "remote";
+    } else {
+      return true;
+    }
+  };
   
   export const filterJobs = (data, filters) => {
     return data?.filter((value) => {
@@ -42,6 +51,8 @@ export const numberToCurrency = (amount, currencyCode) => {
             filters[filterName] === 0
               ? flag
               : flag && compareExp(value, filters, "minExp", "maxExp");
+            } else if (filterName === "remote") {
+              flag = flag && compareRemote(value, filters[filterName]);
         } else {
           flag = flag && value[filterName]?.includes(filters[filterName]);
         }
