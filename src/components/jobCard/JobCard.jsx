@@ -18,8 +18,8 @@ const JobCard = ({ data }) => {
     salaryCurrencyCode,
   } = data;
   return (
-     <Grid item xs={12} sm={6} md={4} lg={3} >
-      <div key={jdUid} className="job-card-root">
+    <Grid item xs={12} sm={6} md={4} lg={3}>
+    <div className="job-card-root">
         <div className="job-card-content">
           <div className="job-card-header">
             {jobRole && (
@@ -39,15 +39,15 @@ const JobCard = ({ data }) => {
                 ? `Estimated Salary : ${numberToCurrency(
                     minJdSalary,
                     salaryCurrencyCode
-                  )} - ${numberToCurrency(
+                  )}(min) ${salaryCurrencyCode} - ${numberToCurrency(
                     maxJdSalary,
                     salaryCurrencyCode
-                  )} ${salaryCurrencyCode}`
+                  )} ${salaryCurrencyCode} (max)`
                 : minJdSalary || maxJdSalary
                 ? `Estimated Salary  : ${numberToCurrency(
                     minJdSalary || maxJdSalary,
                     salaryCurrencyCode
-                  )} ${salaryCurrencyCode}`
+                  )} ${salaryCurrencyCode} ${minJdSalary ? "(min)" : "(max)"}`
                 : "Estimated Salary  : Not Mentioned"}
             </Typography>
             </div>
@@ -71,10 +71,12 @@ const JobCard = ({ data }) => {
 <div className="job-card-footer">
           <Typography fontSize={11} color={"#8b8b8b"}>
             {minExp && maxExp
-              ? `Experience : ${minExp} - ${maxExp} years`
+               ? `Experience : ${minExp} years (min) - ${maxExp} years (max)`
               : minExp || maxExp
-              ? `Experience : ${minExp || maxExp} years`
-              : "Experience : 0 years"}
+              ? `Experience : ${minExp || maxExp} years ${
+                minExp ? "(min)" : "(max)"
+              }`
+            : "Experience : Not Mentioned"}
           </Typography>
           {jdLink && (
             <Button
