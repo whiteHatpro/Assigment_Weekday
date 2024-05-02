@@ -1,12 +1,12 @@
 
 import "./App.css";
-import JobCard from "./components/jobCard/JobCard";
+import ListingArea from "./components/listingArea/ListingArea";
 
 function App() {
     return (
-        <>
-          <JobCard />
-        </>
+      <div className="app-root">
+      <ListingArea />
+    </div>
       );
 }
 
