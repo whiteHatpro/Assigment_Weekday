@@ -1,6 +1,14 @@
 * {
-    font-family: "Poppins";
+    font-family: "Gill Sans";
     padding : 0px;
     margin: 0px;
     box-sizing: border-box;
   }
+
+  .MuiTypography-root {
+    font-family: "Gill Sans" !important;
+  }
+  .MuiButton-root {
+    text-transform: none !important;
+    }
+  
