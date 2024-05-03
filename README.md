@@ -42,9 +42,9 @@ The following tech stack is used for the assignment:
 
 ### API Integration
 The jobs data is fetched from the following API:
-
-[text](https://api.weekday.technology/adhoc/getSampleJdJSON)
-
+```sh
+(https://api.weekday.technology/adhoc/getSampleJdJSON)
+```
 The API takes "limit" and "offset" as request body parameters and returns the list of jobs and total count of jobs present.
 
 ### Getting Started
