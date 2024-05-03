@@ -1,4 +1,4 @@
-# Candidate Application Platform/Weekday Frontend Assignment
+<img width="1320" alt="Screenshot 2024-05-03 at 4 01 30 PM" src="https://github.com/whiteHatpro/Assigment_Weekday/assets/77486870/15fa4aec-6e06-4bb4-806d-c897bde485e8"># Candidate Application Platform/Weekday Frontend Assignment
 
 ## Overview
 The Candidate Application Platform is a web application that allows users to view job listings, filter jobs based on various criteria, and implement infinite scroll for a seamless browsing experience. The platform provides a user-friendly interface for viewing and applying to jobs.
@@ -60,6 +60,17 @@ To get started with the Candidate Application Platform, follow these steps:
 - The sidebar from the UI design is not replicated in this implementation.
 - For the scope of this assignment, only the "Search jobs" section needs to be implemented.
 - Ensure to refer to the provided UI designs and integrate infinite scroll behavior similar to the provided extension.
+
+### Screenshots
+<img width="1320" alt="Screenshot 2024-05-03 at 4 01 30 PM" src="https://github.com/whiteHatpro/Assigment_Weekday/assets/77486870/503942c7-0c9d-48e0-98d9-0db9c3794d44">
+<img width="1481" alt="Screenshot 2024-05-03 at 4 01 11 PM" src="https://github.com/whiteHatpro/Assigment_Weekday/assets/77486870/dfc1d8eb-7a77-41e9-9f12-8703c31e6f17">
+<img width="844" alt="Screenshot 2024-05-03 at 4 01 18 PM" src="https://github.com/whiteHatpro/Assigment_Weekday/assets/77486870/03a8e1b9-38cf-4bb5-a98d-b44a674fcc9d">
+<img width="1131" alt="Screenshot 2024-05-03 at 4 01 51 PM" src="https://github.com/whiteHatpro/Assigment_Weekday/assets/77486870/7712e466-4a25-4383-a23a-649b1cf16865">
+
+
+
+
+
 
 
 
