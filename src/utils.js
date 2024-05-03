@@ -42,13 +42,13 @@ export const numberToCurrency = (amount, currencyCode) => {
       for (let filterName in filters) {
         if (filterName === "minJdSalary") {
           flag =
-            filters[filterName] === 0
+          filters[filterName] === null
               ? flag
               : flag &&
                 compareSalary(value, filters, "minJdSalary", "maxJdSalary");
         } else if (filterName === "minExp") {
           flag =
-            filters[filterName] === 0
+          filters[filterName] === null
               ? flag
               : flag && compareExp(value, filters, "minExp", "maxExp");
             } else if (filterName === "remote") {
