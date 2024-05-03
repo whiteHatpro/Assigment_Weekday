@@ -1,11 +1,66 @@
-# Assigment_Weekday
-creating a candidate application platform that allows users to view job listings, filter jobs based on various criteria
+# Candidate Application Platform/Weekday Frontend Assignment
 
-# React + Vite
+## Overview
+The Candidate Application Platform is a web application that allows users to view job listings, filter jobs based on various criteria, and implement infinite scroll for a seamless browsing experience. The platform provides a user-friendly interface for viewing and applying to jobs.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requirements
 
-Currently, two official plugins are available:
+### Job Cards
+Each job listing is displayed as a card containing the following information:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Job title
+- Company name
+- Location
+- Job description (limited to a certain number of characters with an option to expand)
+- Experience required
+- Apply button/link
+
+### Filters
+Filters are implemented to allow users to refine the job listings based on:
+
+- Min experience
+- Company name
+- Location
+- Remote/on-site
+- Tech stack
+- Role
+- Min base pay
+
+### Infinite Scroll
+Infinite scroll is implemented to load additional job listings as the user scrolls down the page. The platform fetches and displays more jobs automatically without requiring the user to click on a "Load More" button.
+
+### Responsive Design (Optional)
+The platform is responsive and works well on different screen sizes, including mobile devices.
+
+### Technology Stack
+The following tech stack is used for the assignment:
+
+- ReactJs
+- Redux
+- CSS
+- Material UI
+
+### API Integration
+The jobs data is fetched from the following API:
+
+[text](https://api.weekday.technology/adhoc/getSampleJdJSON)
+
+The API takes "limit" and "offset" as request body parameters and returns the list of jobs and total count of jobs present.
+
+### Getting Started
+To get started with the Candidate Application Platform, follow these steps:
+
+- Clone this repository to your local machine.
+- Install dependencies by running npm install or yarn install.
+- Run the development server by running npm start or yarn start.
+- Open the application in your web browser.
+
+
+### Additional Notes
+- The sidebar from the UI design is not replicated in this implementation.
+- For the scope of this assignment, only the "Search jobs" section needs to be implemented.
+- Ensure to refer to the provided UI designs and integrate infinite scroll behavior similar to the provided extension.
+
+
+
+
