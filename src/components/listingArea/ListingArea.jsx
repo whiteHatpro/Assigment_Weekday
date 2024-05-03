@@ -35,7 +35,6 @@ const ListingArea = () => {
         }
       });
       if (node) observer.current.observe(node);
-      console.log(node);
     },
     [jobsDataLoading]
   );
@@ -50,17 +49,21 @@ const ListingArea = () => {
     <div className="listing-area-root">
        <Filters />
       <Grid container spacing={4} className="listing-area-card-content">
-      {filteredJobs?.length > 0
-         ? filteredJobs?.map((job, index) => {
+      {filteredJobs?.length > 0 ? (
+          <>
+            {filteredJobs?.map((job, index) => {
           if (index + 1 === filteredJobs?.length) {
-            return (
-              <JobCard key={job?.jdUid} data={job} reference={lastJobRef} />
-            );
+            return <JobCard key={job?.jdUid} data={job} />;
           } else {
             return <JobCard key={job?.jdUid} data={job} />;
           }
-        })
-          : !jobsDataLoading && <NoData />}
+        })}
+        <div ref={lastJobRef}></div>
+      </>
+       ) : (
+        !jobsDataLoading && <NoData />
+    )}
+
          {jobsDataLoading && (
           <div className="listing-area-laoding">
             <CircularProgress />
